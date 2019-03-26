@@ -33,3 +33,10 @@ eventkey {
   display: block;
   font-size: 5rem;
 }
+
+.sound {
+  font-size: 2.5rem;
+  text-transform: lowercase;
+  letter-spacing: .1rem;
+  color: #cad620;
+}
