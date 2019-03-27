@@ -46,13 +46,24 @@
     </div>
   </div>
 
-  <audio data-key="65" src="sounds/aSound.wav"></audio>
+// Here are the corresponding audio-file and the data attributes 'data-key'
+   <audio data-key="65" src="sounds/aSound.wav"></audio>
    <audio data-key="83" src="sounds/bSound.wav"></audio>
    <audio data-key="68" src="sounds/cSound.wav"></audio>
    <audio data-key="70" src="sounds/dSound.wav"></audio>
    <audio data-key="71" src="sounds/eSound.wav"></audio>
    <audio data-key="72" src="sounds/fSound.wav"></audio>
    <audio data-key="74" src="sounds/gSound.wav"></audio>
+
+   <script>
+     window.addEventListener('keydown', function(e)  {
+       const audio = document.querySelector('audio[data-key="${e.keyCode}"]');
+       const key = document.querySelector('.key[data-key="${e.keyCode}"]');
+       if(!audio)return;  //  Stop the function in running all together.
+       audio.currentTime = 0;  // Rewind to the start.
+       audio.play();
+     });
+   </script>
 
 </body>
 </html>
