@@ -46,7 +46,7 @@
     </div>
   </div>
 
-// Here are the corresponding audio-file and the data attributes 'data-key'
+<!--  Here are the corresponding audio-file and the data attributes 'data-key'-->
    <audio data-key="65" src="sounds/aSound.wav"></audio>
    <audio data-key="83" src="sounds/bSound.wav"></audio>
    <audio data-key="68" src="sounds/cSound.wav"></audio>
@@ -62,6 +62,7 @@
        if(!audio)return;  //  Stop the function in running all together.
        audio.currentTime = 0;  // Rewind to the start.
        audio.play();
+       key.classList.add('playing');
      });
    </script>
 
